@@ -1,1 +1,3 @@
-This is a website about Open-ON
+This is a website about OpenObj
+
+link: https://openobj.github.io/

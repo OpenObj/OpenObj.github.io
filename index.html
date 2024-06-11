@@ -49,6 +49,44 @@
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
     });
     </script>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      gap: 10px;
+      padding: 0;
+    }
+    
+    .grid-container > div {
+      text-align: center;
+      padding: 0;
+      font-size: 30px;
+    }
+    
+    .item1 {
+      grid-column: 1 / 4;
+    }
+    .item2 {
+      grid-column: 4 / 7;
+    }
+    .item3 {
+      grid-column: 1 / 4;
+    }
+    .item4 {
+      grid-column: 4 / 7;
+    }
+    
+    .content h4 {
+      font-size: 16px; !important;
+      padding: 0;
+      margin: 0; !important;
+    }
+    
+    hr {
+      background-color: lightgray;!important;
+    }
+    
+    </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office0_instance","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_0_instance_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>

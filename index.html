@@ -51,7 +51,18 @@
     </script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"scene","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_0_instance_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office0_instance","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_0_instance_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office0_partfeat","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_0_partfeat_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office0_rgb","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_0_rgb_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office0_semantic","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_0_semantic_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office3_instance","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_3_instance_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office3_partfeat","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_3_partfeat_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office3_rgb","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_3_rgb_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"office3_semantic","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/office_3_semantic_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"room0_instance","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/room_0_instance_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"room0_partfeat","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/room_0_partfeat_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"room0_rgb","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/room_0_rgb_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
+  <script type="application/ld+json">{"@context":"http://schema.org/","@type":"3DModel","name":"room0_semantic","encoding":[{"@type":"MediaObject","contentUrl":"./static/3dModel/room_0_semantic_colored_scene.glb","encodingFormat":"model/gltf-binary"}]}</script>
 </head>
 <body>
 
@@ -292,8 +303,105 @@
             <span>Multi-granularity Open-vocabulary Retrieval</span>
           </h2>
         <!--/ Re-rendering. -->
+
+        <h3 class="title is-4">3D Reconstruction</h3>
+        <p class="caption selection" style="grid-column-start: 1; grid-column-end: 3;">
+          Visualisation of Scene
+      <select id="partial_label-selector1_3D" class="partial_label-selector-3D" style="padding: 2px; background:#f0f0f0; border:none; font-family: 'Noto Sans', sans-serif; font-size:16px;">
+                    <option value="office0" selected="">Office0</option>
+                    <option value="office3">Office3</option>
+                    <option value="room0">Room0</option>
+       </select>
+              Reconstructed by our method.
+          </p>
+          <div class="columns is-centered">
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content" center="">
+                <h4 class="title is-5 has-text-centered">Instance</h4>
+              </div>
+            </div>
+      
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content" center="">
+                <h4 class="title is-5 has-text-centered">Partfeat</h4>
+              </div>
+            </div>
+          </div>
+          <div class="partial_label_3D office0">
+            <!--  room0 vMAP-->
+            <div class="grid-container">
+            <div class="item1">
+                    <model-viewer style="height: 360px; width: 480px;" alt="instance" src="./static/3dModel/office_0_instance_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item2">
+                    <model-viewer style="height: 360px; width: 480px;" alt="partfeat" src="./static/3dModel/office_0_partfeat_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item3">
+                    <model-viewer style="height: 360px; width: 480px;" alt="rgb" src="./static/3dModel/office_0_rgb_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item4">
+                    <model-viewer style="height: 360px; width: 480px;" alt="semantic" src="./static/3dModel/office_0_semantic_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item5">
+              office0
+            </div>
+          </div>
+
+          <div class="partial_label_3D office3">
+            <!--  room0 vMAP-->
+            <div class="grid-container">
+            <div class="item1">
+                    <model-viewer style="height: 360px; width: 480px;" alt="instance" src="./static/3dModel/office_3_instance_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item2">
+                    <model-viewer style="height: 360px; width: 480px;" alt="partfeat" src="./static/3dModel/office_3_partfeat_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item3">
+                    <model-viewer style="height: 360px; width: 480px;" alt="rgb" src="./static/3dModel/office_3_rgb_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item4">
+                    <model-viewer style="height: 360px; width: 480px;" alt="semantic" src="./static/3dModel/office_3_semantic_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item5">
+              office3
+            </div>
+          </div>
+
+          <div class="partial_label_3D room0">
+            <!--  room0 vMAP-->
+            <div class="grid-container">
+            <div class="item1">
+                    <model-viewer style="height: 360px; width: 480px;" alt="instance" src="./static/3dModel/room_0_instance_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item2">
+                    <model-viewer style="height: 360px; width: 480px;" alt="partfeat" src="./static/3dModel/room_0_partfeat_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item3">
+                    <model-viewer style="height: 360px; width: 480px;" alt="rgb" src="./static/3dModel/room_0_rgb_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item4">
+                    <model-viewer style="height: 360px; width: 480px;" alt="semantic" src="./static/3dModel/room_0_semantic_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    </model-viewer>
+            </div>
+            <div class="item5">
+              room0
+            </div>
+          </div>
         <!-- <div class="item1"> -->
-          <model-viewer src="./static/3dModel/office_0_instance_colored_scene.glb" alt="123" auto-rotate camera-controls></model-viewer>
+          <!-- <model-viewer src="./static/3dModel/office_0_instance_colored_scene.glb" alt="123" auto-rotate camera-controls></model-viewer> -->
           <!-- <model-viewer src="./static/3dModel/office_0_instance_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting"> -->
           <!-- </model-viewer> -->
         <!-- </div> -->
